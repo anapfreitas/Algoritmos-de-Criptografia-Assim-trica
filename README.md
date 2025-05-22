@@ -1,51 +1,67 @@
+
 # 🔐 Criptografia Assimétrica com RSA em Python
 
-Este projeto demonstra uma implementação prática do algoritmo **RSA (Rivest–Shamir–Adleman)**, uma das técnicas mais conhecidas de **criptografia assimétrica**, utilizando a linguagem Python.
-
-O sistema realiza a cifragem (criptografia) e a decifragem (decriptação) de mensagens com segurança, garantindo que apenas o destinatário correto possa acessar o conteúdo original da informação.
-
----
-
-## 🧠 O que é Criptografia Assimétrica?
-
-A criptografia assimétrica é um método de segurança digital baseado em um **par de chaves**:
-
-- 🔓 **Chave pública** – usada para **cifrar** (criptografar) mensagens.  
-- 🔐 **Chave privada** – usada para **decifrar** (descriptografar) mensagens.
-
-Esse modelo assegura que apenas quem possui a chave privada possa acessar a informação cifrada, mesmo que ela tenha sido transmitida por canais inseguros.
-
-### 🔍 Aplicações reais:
-- Proteção de dados em conexões seguras (HTTPS)
-- Assinaturas digitais
-- Sistemas de autenticação
-- Blockchain e carteiras de criptomoedas
+Este projeto apresenta uma implementação simples e funcional da **criptografia assimétrica** utilizando o algoritmo **RSA (Rivest–Shamir–Adleman)** em Python.  
+A criptografia assimétrica é amplamente usada para garantir a **confidencialidade e integridade dos dados**, utilizando um par de chaves: uma **pública** e uma **privada**.
 
 ---
 
-## 💻 Como funciona o programa?
+## 🧠 Sobre o funcionamento
 
-O algoritmo RSA foi implementado com a biblioteca `cryptography` em Python. Ao executar o programa, o usuário digita a mensagem desejada diretamente no terminal.
+O sistema implementa as operações básicas do algoritmo RSA:
 
-Em seguida, o sistema realiza as seguintes etapas:
+- **Geração automática de chaves**: ao iniciar o programa, é gerado um par de chaves (pública e privada).
+- **Ciframento de mensagens**: o usuário digita um texto, que é convertido para bytes e cifrado com a chave pública.
+- **Decifragem de mensagens**: o sistema utiliza a chave privada para recuperar a mensagem original.
 
-1. Geração do par de chaves (pública e privada)  
-2. Cifração da mensagem com a chave pública  
-3. Decifração da mensagem com a chave privada  
-4. Exibição da mensagem original, cifrada (em bytes) e decifrada
-
----
-
-## 📥 Entrada do Usuário
-
-O programa solicita que o usuário digite uma mensagem.  
-Essa mensagem será protegida via RSA e só poderá ser lida após o processo de decifragem com a chave correta.
+> As mensagens não são armazenadas em arquivos. Todo o processo ocorre em **memória** e é realizado diretamente pelo terminal.
 
 ---
 
-## 📸 Print da Execução
+## ⚙️ Funcionalidades
 
-![Execução do Programa](https://github.com/user-attachments/assets/d7371740-f3aa-4e7c-8a7e-cb209ae05bcb)
+- Geração automática do par de chaves RSA ao iniciar o programa
+- Ciframento de mensagens fornecidas pelo usuário
+- Decifragem da última mensagem cifrada
+- Menu interativo com opções claras e didáticas
+
+---
+
+## 📋 Estrutura do menu
+
+Ao executar o programa, o usuário verá:
+
+```
+=== MENU - CRIPTOGRAFIA RSA ===
+1 - Cifrar mensagem
+2 - Decifrar mensagem
+3 - Sair
+```
+
+- **Opção 1**: solicita que o usuário digite um texto, que será cifrado usando RSA.
+- **Opção 2**: decifra a última mensagem cifrada.
+- **Opção 3**: encerra o programa.
+
+---
+
+## 💻 Exemplo de uso
+
+```
+Par de chaves RSA gerado com sucesso.
+
+=== MENU - CRIPTOGRAFIA RSA ===
+1 - Cifrar mensagem
+2 - Decifrar mensagem
+3 - Sair
+Escolha uma opção: 1
+Digite a mensagem a ser cifrada: Teste de criptografia
+Mensagem cifrada com sucesso.
+
+=== MENU - CRIPTOGRAFIA RSA ===
+Escolha uma opção: 2
+Mensagem decifrada:
+Teste de criptografia
+```
 
 ---
 
@@ -54,6 +70,10 @@ Essa mensagem será protegida via RSA e só poderá ser lida após o processo de
 **Ana Paula Santos de Freitas**  
 Estudante de Análise e Desenvolvimento de Sistemas  
 📍 Instituto Federal do Triângulo Mineiro (IFTM) – Campus Patrocínio
+
+---
+
+Este projeto foi desenvolvido como parte da disciplina de **Segurança da Informação**, com o objetivo de demonstrar o funcionamento da criptografia assimétrica utilizando o algoritmo **RSA**.
 
 
 
